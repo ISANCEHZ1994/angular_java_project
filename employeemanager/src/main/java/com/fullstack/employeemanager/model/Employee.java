@@ -11,7 +11,7 @@ public class Employee implements Serializable {
     @Id // we want the id variable to be the primary key in the database
     @GeneratedValue(strategy = GenerationType.IDENTITY) // we want this to be specific so we use (information here)
     @Column(nullable = false, updatable = false) // id will never be updated in database
-    private Long id;
+    private Long id; // will be used in the EmployeeRepo Interface
     private String name;
     private String email;
     private String jobTitle;
