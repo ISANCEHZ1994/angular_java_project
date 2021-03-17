@@ -1,13 +1,12 @@
 package com.fullstack.employeemanager.service;
 
+import com.fullstack.employeemanager.exception.UserNotFoundException;
 import com.fullstack.employeemanager.model.Employee;
 import com.fullstack.employeemanager.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class EmployeeService {
@@ -34,9 +33,9 @@ public class EmployeeService {
 
     public Employee findEmployeeById(Long id) throws Throwable {
         return employeeRepo
-                .findEmployeeById(id)
+                .findEmployeeById(id)// from EmployeeRepo Interface
                 .orElseThrow(() -> new UserNotFoundException("User by id " + id + " was not found"));
-                // from EmployeeRepo Interface
+                // NOTE: UserNotFoundException has to be created!
     }
 
     public void deleteEmployee(Employee employee, Long id){
