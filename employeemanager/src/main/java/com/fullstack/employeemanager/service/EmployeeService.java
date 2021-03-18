@@ -38,7 +38,7 @@ public class EmployeeService {
                 // NOTE: UserNotFoundException has to be created!
     }
 
-    public void deleteEmployee(Employee employee, Long id){
+    public void deleteEmployee( Long id){
         employeeRepo.deleteEmployeeById(id); // we have to create our own method to do what we want it to
         // getting method from EmployeeRepo Interface
     }
