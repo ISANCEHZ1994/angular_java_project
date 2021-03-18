@@ -20,6 +20,10 @@ public class Employee implements Serializable {
     @Column(nullable = false, updatable = false) // employeeCode will never be updated in database
     private String employeeCode;
 
+    public Employee(){
+
+    }
+
     public Employee(String n, String e, String j, String p, String i, String c){
         name = n;
         email = e;
