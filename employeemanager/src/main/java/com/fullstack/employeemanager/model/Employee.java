@@ -79,7 +79,7 @@ public class Employee implements Serializable {
     }
 
     public void setImageURL(String i){
-        imageURL = i;
+        this.imageURL = i;
     }
 
     public String getEmployeeCode(){
@@ -87,18 +87,18 @@ public class Employee implements Serializable {
     }
 
     public void setEmployeeCode(String e){
-        employeeCode = e;
+        this.employeeCode = e;
     }
 
     @Override
     public String toString(){
         return "Employee{" +
-                "id= " + id +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", jobTitle='" + jobTitle + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", imageURL='" + imageURL + '\'' +
+                ", phone='" + phoneNumber + '\'' +
+                ", imageUrl='" + imageURL + '\'' +
                 '}';
     };
 

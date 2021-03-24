@@ -6,6 +6,8 @@ import com.fullstack.employeemanager.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 import java.util.*;
 
 @Service
@@ -38,11 +40,10 @@ public class EmployeeService {
                 // NOTE: UserNotFoundException has to be created!
     }
 
+    @Transactional
     public void deleteEmployee( Long id){
         employeeRepo.deleteEmployeeById(id); // we have to create our own method to do what we want it to
         // getting method from EmployeeRepo Interface
     }
 
-
 }
-
