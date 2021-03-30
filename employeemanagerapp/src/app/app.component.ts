@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
         },
       );
   }
-
+            
   public onUpdateEmployee(employee: Employee): void{
       this.employeeService.updateEmployee(employee).subscribe(
         (response: Employee) => {
